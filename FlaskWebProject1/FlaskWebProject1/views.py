@@ -25,3 +25,12 @@ def sample():
         title='Sample Project Page',
         year=datetime.now().year,
     )
+
+@app.route('/urlshortener')
+def urlShortener():
+    """Renders page that shortens URLs"""
+    return render_template(
+        'urlShortener.html',
+        title='URL Shortener',
+        year=datetime.now().year,
+    )
