@@ -32,7 +32,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FlaskWebProject1\urlGen.py" />
-    <Compile Include="urlModels.py">
+    <Compile Include="FlaskWebProject1\urlModels.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="runserver.py" />
