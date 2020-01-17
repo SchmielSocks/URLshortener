@@ -17,7 +17,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>FlaskWebProject1</Name>
     <RootNamespace>FlaskWebProject1</RootNamespace>
-    <InterpreterId>MSBuild|URL Shortener|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|URL Shortener1|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,6 +28,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FlaskWebProject1\config.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="FlaskWebProject1\urlGen.py" />
     <Compile Include="runserver.py" />
     <Compile Include="FlaskWebProject1\__init__.py" />
@@ -44,6 +47,7 @@
   <ItemGroup>
     <Content Include="FlaskWebProject1\templates\urlShortener.html" />
     <Content Include="FlaskWebProject1\templates\sample.html" />
+    <Content Include="FlaskWebProject1\templates\urlReturn.html" />
     <Content Include="requirements.txt" />
     <Content Include="FlaskWebProject1\static\content\bootstrap.css" />
     <Content Include="FlaskWebProject1\static\content\bootstrap.min.css" />
@@ -71,8 +75,8 @@
     <Content Include="FlaskWebProject1\templates\layout.html" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="..\..\..\..\Desktop\URL Shortener\">
-      <Id>URL Shortener</Id>
+    <Interpreter Include="URL Shortener\">
+      <Id>URL Shortener1</Id>
       <Version>3.6</Version>
       <Description>URL Shortener (Python 3.6 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>

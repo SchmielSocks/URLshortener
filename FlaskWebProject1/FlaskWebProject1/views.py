@@ -3,7 +3,7 @@ Routes and views for the flask application.
 """
 
 from datetime import datetime
-from flask import render_template
+from flask import render_template, request
 from FlaskWebProject1 import app
 from FlaskWebProject1.urlGen import *
 
@@ -33,4 +33,15 @@ def urlShortener():
         'urlShortener.html',
         title='URL Shortener',
         year=datetime.now().year,
+    )
+
+@app.route('/urlshortener', methods=['POST'])
+def urlShortenerReturn():
+    url = request.form['url']
+    custom = request.form['custom']
+    return render_template(
+        'urlReturn.html',
+        title='Your new URL',
+        year = datetime.now().year,
+        url = urlGen(url, custom),
     )

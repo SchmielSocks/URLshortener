@@ -1,0 +1,18 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1> URL Shortener </h1>
+    <p class="lead"> Synopsis: Allows for a URL to be shortened in to a random string or additionally, allows for custom URLs. </p>
+</div>
+
+<div class="jumbotron">
+    <h2> Your latest shortened URL has been added to the database. </h2>
+    <h2> {{ url }} </h2>
+    <br />
+    <h5> <a href="{{ url_for('urlShortener') }}">Need to shorten another URL?</a> </h5>
+</div>
+
+
+{% endblock %}

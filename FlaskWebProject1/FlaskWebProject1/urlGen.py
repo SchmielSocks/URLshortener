@@ -2,5 +2,9 @@
 import string
 import random
 
-def urlGen(urlLen = 12, letters = string.ascii_letters):
-    return ''.join(random.choice(letters) for i in range(urlLen))
+def urlGen(url, custom, urlLen = 12, letters = string.ascii_letters):
+    site = 'http://urlshortener.com/'
+    if custom == '':
+        return site + ''.join(random.choice(letters) for i in range(urlLen))
+    else:
+        return site + custom
