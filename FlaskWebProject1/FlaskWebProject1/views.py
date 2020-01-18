@@ -4,7 +4,7 @@ Routes and views for the flask application.
 
 from datetime import datetime
 from flask import render_template, request
-from FlaskWebProject1 import app
+from FlaskWebProject1 import *
 from FlaskWebProject1.urlGen import *
 
 @app.route('/')
@@ -44,7 +44,15 @@ def urlShortenerReturn():
     db.session.commit()
     return render_template(
         'urlReturn.html',
-        title='Your new URL',
+        title='Your New URL',
         year = datetime.now().year,
         url = urlGen(url, custom),
+    )
+
+@app.route('/manageUrls')
+def manageUrlsEnd():
+    return render_template(
+        'manageUrls.html',
+        title='Manage URLs',
+        year = datetime.now().year,
     )
