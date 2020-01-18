@@ -39,6 +39,9 @@ def urlShortener():
 def urlShortenerReturn():
     url = request.form['url']
     custom = request.form['custom']
+    u = Url(url=url, shortenedUrl=custom)
+    db.session.add(u)
+    db.session.commit()
     return render_template(
         'urlReturn.html',
         title='Your new URL',
