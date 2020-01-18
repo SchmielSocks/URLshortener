@@ -6,4 +6,4 @@ class Url(db.Model):
     shortenedUrl = db.Column(db.String(64), index=True, unique=True)
 
     def __repr__(self):
-        return '\'{}\':\'http://urlshortener.com/{}\''.format(self.url, self.shortenedUrl)
+        return '{} --> http://urlshortener.com/{}'.format(self.url, self.shortenedUrl)

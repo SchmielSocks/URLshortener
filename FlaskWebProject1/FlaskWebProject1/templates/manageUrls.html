@@ -7,7 +7,11 @@
 </div>
 
 <div class="jumbotron">
-    
+    <ul>
+        {% for url in dbCol %}
+            <li><a href="{{ url.href }}">{{ url }}</a></li>
+        {% endfor %}
+    </ul>
 </div>
 
 

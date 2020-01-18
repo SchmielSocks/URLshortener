@@ -50,9 +50,11 @@ def urlShortenerReturn():
     )
 
 @app.route('/manageUrls')
-def manageUrlsEnd():
+def manageUrls():
+    dbCol = Url.query.all()
     return render_template(
         'manageUrls.html',
         title='Manage URLs',
         year = datetime.now().year,
+        dbCol = dbCol,
     )
